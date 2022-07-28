@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralex</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: rgb(18, 10, 19);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        position: relative;
+        background: url('./img/bg.jpg') repeat-x;
+        background-size: cover;
+        width: 800px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tree {
+        background-color: red;
+    }
+
+    button {
+        width: 10%;
+        cursor: pointer;
+        position: absolute;
+        color: wheat;
+        border: none;
+        padding: 5px;
+        background-color: rgb(102, 55, 176);
+    }
+
+    button:hover {
+        box-shadow: -4px -5px 75px 19px rgba(209, 93, 227, 0.69);
+        -webkit-box-shadow: -4px -5px 75px 19px rgba(209, 93, 227, 0.69);
+        -moz-box-shadow: -4px -5px 75px 19px rgba(209, 93, 227, 0.69);
+        background-color: rgb(37, 3, 94);
+        border-radius: 5px;
+    }
+
+    .start {
+        top: 5%;
+    }
+
+    .stop {
+        top: 15%;
+    }
+
+    .car {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: -70px;
+        /*animation: bounce 1s linear infinite;*/
+    }
+
+    .car img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .moon {
+        background-color: rebeccapurple;
+        width: 140px;
+        height: 120px;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        opacity: 1;
+        background: url("./img/moon.png") no-repeat;
+        background-size: 115px 80px;
+    }
+
+    .tree {
+        position: absolute;
+        width: 100%;
+        height: 300px;
+        bottom: 0;
+        right: 0;
+        background: url('./img/nekhla1.png') repeat;
+        background-size: 90% 300px;
+
+    }
+
+   
+
+    .grass {
+        position: absolute;
+        height: 80px;
+        width: 100%;
+        bottom: 0;
+        right: 0;
+        background: url("./img/grass.png") repeat;
+        background-size: 100% 80px;
+    }
+
+
+    @keyframes bounce {
+        100% {
+            transform: translateY(2px);
+        }
+
+        50% {
+            transform: translateY(-1px);
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <button id="start" class="start">start </button>
+        <button class="stop">stop</button>
+        <div class="moon" data-active></div>
+        <div class="moon2"></div>
+        <div class="tree"></div>
+        <div class="grass"> </div>
+        <div class="car">
+            <img src="./img/car (2).png" alt="">
+        </div>
+        <div class="footer"></div>
+    </div>
+
+</body>
+<script src="animation.js"></script>
+
+</html>
